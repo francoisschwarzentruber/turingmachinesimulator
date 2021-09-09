@@ -1,0 +1,29 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+  <h1>About this Turing machine simulator</h1>
+  <h2>Presentation</h2>
+  This website is a Turing machine simulator. The motivation was to design a simulator than handles non-determinism and that shows computation trees instead of animations.
+  Given a Turing machine and an input, it shows the computation tree from the initial configuration. In particular, the Turing machine can be non-deterministic.
+  This simulator is developped in Javascript with JQuery and jsPlumb by François Schwarzentruber (francois.schwarzentruber[@]ens-rennes.fr). The software is under licence is GPLv3.
+
+
+
+<h2>Description of Turing machines</h2>
+ <div id="SyntaxInfo">The produced machine is represented as follows.
+   <ul>
+    <li>Each line should contain one tuple of the form '<tt>&lt;current state&gt; &lt;current symbol&gt; &lt;new symbol&gt; &lt;direction&gt; &lt;new state&gt;</tt>'.</li>
+    <li>You can use any number or word for <tt>&lt;current state&gt;</tt> and <tt>&lt;new state&gt;</tt>, eg <tt>0, a, state1</tt>. State labels are case-sensitive.</li>
+    <li><tt>acc</tt> is an accepting state. <tt>rej</tt> is a rejecting state. <tt>halt</tt> is a halting state. The machine starts in state <tt>0</tt>.</li>
+    <li>You can use any character for <tt>&lt;current symbol&gt;</tt> and <tt>&lt;new symbol&gt;</tt>, or '<tt>_</tt>' to represent blank (space). Symbols are case-sensitive.</li>
+    <li><tt>&lt;direction&gt;</tt> should be '<tt>l</tt>', '<tt>r</tt>' or '<tt>*</tt>', denoting 'move left', 'move right' or 'do not move', respectively.</li>
+    <li>Anything after a '<tt>;</tt>' is a comment and is ignored.</li>
+   </ul>
+   Also:
+   <ul>
+    <li>'<tt>*</tt>' can be used in <tt>&lt;current symbol&gt;</tt> or <tt>&lt;current state&gt;</tt> to match any character or state.</li>
+    <li>'<tt>*</tt>' can be used in <tt>&lt;new symbol&gt;</tt> or <tt>&lt;new state&gt;</tt> to mean 'no change'.</li>
+   </ul>
+  </div>
